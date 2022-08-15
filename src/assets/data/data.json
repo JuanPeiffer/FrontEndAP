@@ -1,0 +1,48 @@
+{
+	"name": "Juan Pablo Peiffer",
+	"position": "Desarrollador Web",
+	"company": {
+		"name": "Domestika"
+	},
+	"school": {
+		"name": "UTN.BA"
+	},
+	"ubication": "Buenos Aires (Argentina)",
+	"about": "Persona fisica que le gusta el tema de la programación tanto como a vos te gusta leer esto.",
+	"experience": [{
+		"position": "Frontend Developer",
+		"company": "Google",
+		"mode": "Jornada Parcial",
+		"start": "mar 2019",
+		"end": "actualidad",
+		"timeElapsed": "2 años y 6 meses"
+	}],
+	"education": [{
+		"img":"https://rotulosmatesanz.com/wp-content/uploads/2017/09/2000px-Google_G_Logo.svg_.png",
+		"school": "Cardoso",
+		"tittle": "Bachiller",
+		"career": "Sistemas",
+		"score": 0,
+		"start": "2019",
+		"end": "2023"
+	},
+	{
+		"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/1365px-Facebook_f_logo_%282019%29.svg.png",
+		"school":"Centro de Estudiantes",
+		"tittle":"<3",
+		"career": "Hola",
+		"score": 2,
+		"start": "2017",
+		"end": "2020"
+	},
+	{
+		"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Tesla_T_symbol.svg/2056px-Tesla_T_symbol.svg.png",
+		"school":"Hospital",
+		"tittle":"re",
+		"career": "Chau",
+		"score": 2,
+		"start": "Nunca",
+		"end": "Ahora"
+	}
+]
+}

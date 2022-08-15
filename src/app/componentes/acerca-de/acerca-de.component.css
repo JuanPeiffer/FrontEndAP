@@ -1,0 +1,14 @@
+.redes{
+    display: flex;
+    justify-content: space-around;
+
+}
+.fa-brands{
+    font-size: 40px;
+    color: black;
+
+    transition: all 0.3s;
+}
+.fa-brands:hover{
+    font-size: 45px;
+}

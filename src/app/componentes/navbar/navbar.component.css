@@ -1,0 +1,33 @@
+*{
+    overflow: hidden !important;
+}
+.paglog{
+    display: flex;
+    justify-content: center;
+    z-index: 1000;
+}
+.paglog button{
+    margin: 20px !important;
+}
+.paglog a{
+    padding: 20px !important;
+    margin: 20px !important;
+}
+.imagennavbar{
+    position: absolute !important;
+    z-index: -2;
+}
+.box{
+    padding: 50px 0 20px;
+}
+.navbard{
+    background-color: aliceblue;
+    text-align: center;
+    width: 500px;
+
+    padding: 20px;
+    border-radius: 5px;
+    margin-left: 50%;
+    transform: translate(-50%);
+
+}

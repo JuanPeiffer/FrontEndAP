@@ -1,0 +1,173 @@
+<div class="login">
+  <img src="assets/img/ap.png">
+  <h1>Portfolio Web</h1>
+  
+    <div *ngIf="!isloged()">
+      <a class="loginid"id="login" href="">Login</a>
+    </div>
+  <div *ngIf="isloged()">
+    <a (click)="handleClear()" (click)="autenticacionService.logoutUser()" class="nav-link active" class="btn tooltips">
+      <i class="fa-solid fa-arrow-right-from-bracket"></i> Logout
+    </a>
+  </div>
+</div>
+<div class="redes">
+  <a href="https://www.instagram.com/peifferjuan" target="_blank">
+    <i class="fa-brands fa-instagram"></i>
+  </a>
+  <a href="" target="_blank">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+  <a href="https://www.linkedin.com/in/juanpablopeiffer/" target="_blank">
+    <i class="fa-brands fa-linkedin"></i>
+  </a>
+</div>
+
+
+<div class="uno">
+    <div class="perfil">
+      <div class="portada">
+      </div>
+
+      <div class="fotoperfil">
+        <img src="{{usuario?.fotoPerfil}}">
+      </div>
+      <div class="info">
+        <div class="infopersonal">
+          <h1 class="dentroinfo">{{usuario?.nombre}} {{usuario?.apellido}}</h1>
+          
+          
+          <h3 class="secu">{{usuario?.titulo}}</h3>
+          <h4 class="secu"> <a href="">Información de contacto</a></h4>
+        </div>
+
+
+        <div class="institucion">
+          <div>
+            <img src="assets/img/logos/domestika.png">
+            <p>Domestika</p>
+          </div>
+          <div>
+            <img src="assets/img/logos/utn.jpg">
+            <p>UTN</p>
+          </div>
+        </div>
+      </div>
+      <div class="botones">
+          <a href="" class="boton azul">Tengo interés en</a>
+          <a href="" class="boton">Añadir Sección</a>
+          <a href="" class="boton">Más</a>
+
+          <!-- BOTONES -->
+
+          <button *ngIf="isloged()" (click)="onOpenModal('editar',usuario)" type="button" class="btn btn-warning"  
+          data-bs-toggle="modal" data-bs-target="#editarUsuarioModal">
+            <i class="fa fa-pencil"></i>        
+            </button>
+          
+        </div>
+    </div>
+  </div>
+<div class="uno">
+    <div class="interior">
+      <div class="flex">
+        <p class="titulo">Acerca de</p>
+        <!-- <a onclick="cambiar_parrafo()"><i class="fa fa-pen"></i></a> -->
+      </div>
+      <div *ngIf="usuario?.nombre == null">
+        <button type="button" class="btn btn-success" (click)="onOpenModal('editar')"  data-bs-toggle="modal" 
+        data-bs-target="#exampleModal">
+
+            <a class="nav-link"  style="color: #fff">
+                Añadir descripcion<span class="sr-only">(current)</span>
+            </a>
+
+        </button>
+      </div>
+      
+      <p id="parrafo">{{usuario?.descripcion}}</p>
+      
+  <!-- BOTONES -->
+  <!-- <div class="botones">
+
+    <button (click)="onOpenModal('editar',usuario)" type="button" class="btn btn-warning"   data-bs-toggle="modal" 
+        data-bs-target="#editarUsuarioModal">
+        <i class="fa fa-pencil"></i>        
+        </button>
+  </div> -->
+
+
+      <div class="input">
+        <input type="text" id="edit" oninput="myfunction2(this.value)" >
+      </div>
+    </div>
+</div>
+
+<!--EDITAR EDUCACION-->
+
+
+
+<div class="modal fade" id="editarUsuarioModal" tabindex="-1" role="dialog" 
+        aria-labelledby="editarUsuarioModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="editarUsuarioModalLabel">Editar usuario!</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form #editarForm="ngForm">
+
+            <p>Editando  <b>{{editarUsuario?.nombre}}</b></p>
+
+            <div class="form-group">
+                <label for="nombre">Nombre  </label>
+                <input type="text" ngModel="{{ editarUsuario?.nombre }}" name="nombre" class="form-control" id="nombre" 
+            aria-describedby="emailHelp" placeholder="Titulo" />
+            </div>
+
+            <input type="hidden" ngModel="{{ editarUsuario?.id }}" name="id"  class="form-control" id="id1" placeholder=""/>
+
+            <div class="form-group">
+              <label for="apellido">Apellido</label>
+              <input type="text" ngModel="{{ editarUsuario?.apellido }}" name="apellido" class="form-control" id="apellido"
+              aria-describedby="emailHelp" placeholder="Apellido">
+            </div>
+
+            <div class="form-group">
+              <label for="titulo">Titulo</label>
+              <input type="text" ngModel="{{ editarUsuario?.titulo }}" name="titulo" class="form-control" id="titulo"
+              aria-describedby="emailHelp" placeholder="titulo">
+            </div>
+
+            <div class="form-group">
+                <label for="descripcion">Descripcion</label>
+                <input
+                type="text"
+                ngModel="{{ editarUsuario?.descripcion}}"
+                name="descripcion"
+                class="form-control"
+                id="descripcion1"
+                placeholder="Descripción Usuario"
+              />
+            </div>
+            <div class="form-group">
+                <label for="fotoPerfil">Imagen</label>
+                <input
+              type="text"
+              ngModel="{{ editarUsuario?.fotoPerfil }}"
+              name="fotoPerfil"
+              class="form-control"
+              id="fotoPerfil1"
+              placeholder="URL de imagen"/>
+            </div>
+            
+            <div class="modal-footer">
+                <button type="button" id="editar-usuario-form" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button (click)="onEditarUsuario(editarForm.value)" data-bs-dismiss="modal" class="btn btn-primary">Listo!</button>
+            </div>
+        </form>
+    </div>
+    </div>
+  </div>
+</div>

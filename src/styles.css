@@ -1,0 +1,197 @@
+/* You can add global styles to this file, and also import other style files */
+
+*{
+	font-family: " . . . ", sans-serif;
+	box-sizing: border-box;
+	margin:0;
+	padding: 0;
+}
+
+
+
+
+
+
+.login{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 5px 70px;
+}
+.login img{
+	height: 70px;
+}
+#login{
+	border: 1px solid #8A1800;
+	padding: 10px;
+	border-radius: 5px;
+	background-color: #FEC6BA;
+	color: #8A1800;
+	text-decoration: none;
+	transition: all 0.3s;
+}
+.loginid:hover{
+	background-color: #B8F9FF !important;
+}
+
+
+a{
+	text-decoration: none;
+	color: blue
+}
+
+.uno{
+	margin-top:0 !important;   /* 	 agregado 	*/
+	margin: 15px !important;
+	border:1px solid #D0D0D0 !important;
+	border-radius: 20px !important;
+	background: #F1F1F1 !important;
+}
+.portada{
+	max-width: 100vw !important;
+	height: 55vh !important;
+	background-image: url(src/assets/img/portada.jfif) !important;
+	background-size: cover !important;
+	border-radius: 20px 20px 0 0 !important;
+	margin-bottom: 120px !important;
+}
+.fotoperfil img{
+	width:200px !important;
+    height:200px !important;
+    border-radius:160px !important;
+    border:4px solid #666 !important;
+}
+.fotoperfil{
+	position: absolute;
+	top:55%;
+	left: 50px;
+}
+
+
+
+.info{
+	display: flex !important;
+	justify-content: space-between !important;
+}
+.dentroinfo{
+	font-family: sans-serif !important;
+	padding: 0 0 10px 20px
+}
+.secu{
+	font-family: sans-serif !important;
+	font-size: 20px;
+	padding: 0 0 0 20px;
+	font-weight: lighter;
+}
+.institucion{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	margin-right: 20px;
+	width: 170px
+}
+.institucion img{
+	/*width: 60px;
+	height: 40px;*/
+	width: 50px;
+	padding-right: 5px; 
+}
+.institucion div{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.botones{
+	padding: 30px 0 30px 20px;
+}
+.boton{
+	padding: 15px;
+
+	background:#F3F3F3;
+	color: #000;
+	border-radius: 20px;
+}
+.azul{
+	background: #2C8CFF !important;
+	color: #fff;
+}
+
+
+
+
+
+
+.interior{
+	padding: 0 0 10px 20px
+}
+.titulo{
+	font-size: 30px !important;
+	font-weight: bold !important;
+	margin: 10px 0 10px 0 !important
+}
+.flex{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.fa{
+	margin-right: 30px;
+	cursor: pointer;
+}
+
+
+.logo{
+	width: 200px;
+	padding-right: 30px;
+}
+.subtitulo{
+	font-size: 20px
+}
+.experiencia{
+	display: flex;
+	margin-left: 30px;
+	align-items: center;
+}
+.experiencia img{
+	margin-right: 20px
+}
+.experiencia div{
+	padding-left: 50px;
+}
+
+
+
+#edit{
+	display: none;
+}
+
+.top{
+	margin-top: 60px;
+}
+
+.items-list li{
+	list-style: none;
+	display: flex;
+	margin-bottom: 30px;
+}
+
+/*.portada{
+	max-width: 100vw;
+	height: 55vh;
+	background-image: url(../img/portada.jfif);
+	background-size: cover;
+	margin: 10px;
+	border-radius: 25px 25px 0 0	
+}
+.fotoperfil{
+	position: absolute;
+	top:50%;
+	left: 100px
+}
+.fotoperfil img{
+	width:200px;
+    height:200px;
+    border-radius:160px;
+    border:10px solid #666;
+}*/

@@ -1,0 +1,51 @@
+.footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px 0;
+    text-align: center;
+}
+.footer div{
+    text-align: center;
+    align-items: center;
+    width: 300px;
+}
+.asd{
+    font-size: 15px !important;
+}
+.agra{
+    font-size: 15px;
+}
+.footer p{
+    font-size: 20px;
+}
+.titulofooter{
+    font-weight: 600;
+    font-size: 35px;
+}
+.redes{
+    display: flex;
+    justify-content: space-around;
+}
+
+.fa-brands{
+    font-size: 40px;
+    color: black;
+
+    transition: all 0.3s;
+}
+.fa-brands:hover{
+    font-size: 45px;
+}
+
+
+
+.footer2{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.footer2 p{
+    margin: 0 !important;
+}
